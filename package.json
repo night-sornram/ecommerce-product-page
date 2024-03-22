@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "postinstall": "prisma generate",
-    "build": "prisma generate && <actual-build-command>"
+    "build": "prisma generate && <actual-build-command>",
+    "vercel-build": "prisma generate && prisma migrate deploy && next build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
