@@ -7,7 +7,7 @@ export async function GET() {
   return Response.json(await prisma.item.findMany())
 }
 
-export async function POST(req: NextResponse) {
+export async function POST(req: Request) {
   try {
     const { name, price , quantity  } = await req.json()
     const newCart = await prisma.cart.create({
